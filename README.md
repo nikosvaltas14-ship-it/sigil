@@ -4,8 +4,6 @@ Sigil reads my courses on ΑΠΘ e-learning (Moodle), writes a Greek study guide
 for every class I had, and reminds me on Telegram before tests, finals and
 deadlines. It is the study part of Sigil, my personal assistant.
 
-> _Screenshot / demo GIF: coming soon._
-
 ## What it does today
 
 - **Moodle access without storing a password.** Signs in through ΑΠΘ's single
@@ -126,11 +124,6 @@ See [SECURITY.md](SECURITY.md). In short: secrets only in the OS credential
 store (never a file), untrusted course material never reaches a shell, the
 LaTeX the model writes is checked against an allowlist, every built PDF is
 scanned before use, and there are no listening ports.
-
-## Roadmap (planned, not built yet)
-
-- Test and document macOS/Linux setup end to end
-- Spaced-repetition review sheets built from past guides
 
 ## License
 
