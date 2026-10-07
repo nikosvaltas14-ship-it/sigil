@@ -130,7 +130,6 @@ scanned before use, and there are no listening ports.
 ## Roadmap (planned, not built yet)
 
 - Test and document macOS/Linux setup end to end
-- Continuous integration running the test suite on every push
 - Spaced-repetition review sheets built from past guides
 
 ## License
