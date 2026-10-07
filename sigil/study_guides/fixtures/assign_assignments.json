@@ -1,0 +1,153 @@
+{
+ "courses": [
+  {
+   "id": 18431,
+   "fullname": "ΗΛΕΚΤΡΙΚΑ ΚΥΚΛΩΜΑΤΑ ΙΙ (2026-2027)",
+   "shortname": "ECE_Y0305",
+   "timemodified": 1790751600,
+   "assignments": [
+    {
+     "id": 30101,
+     "cmid": 810120,
+     "course": 18431,
+     "name": "Εργασία 1 - Θεωρήματα Thevenin και Norton",
+     "nosubmissions": 0,
+     "submissiondrafts": 1,
+     "sendnotifications": 0,
+     "sendlatenotifications": 0,
+     "sendstudentnotifications": 1,
+     "duedate": 1792529940,
+     "allowsubmissionsfromdate": 1790802000,
+     "grade": 100,
+     "timemodified": 1790751600,
+     "completionsubmit": 1,
+     "cutoffdate": 1792702740,
+     "gradingduedate": 0,
+     "teamsubmission": 0,
+     "requireallteammemberssubmit": 0,
+     "teamsubmissiongroupingid": 0,
+     "blindmarking": 0,
+     "hidegrader": 0,
+     "revealidentities": 0,
+     "attemptreopenmethod": "untilpass",
+     "maxattempts": -1,
+     "markingworkflow": 0,
+     "markingallocation": 0,
+     "requiresubmissionstatement": 0,
+     "preventsubmissionnotingroup": 0,
+     "configs": [],
+     "intro": "<p>Συνθετική εκφώνηση.</p>",
+     "introformat": 1,
+     "introfiles": [],
+     "introattachments": [],
+     "timelimit": 0,
+     "submissionattachments": 0
+    }
+   ]
+  },
+  {
+   "id": 18437,
+   "fullname": "Ηλεκτρονική Ι",
+   "shortname": "ECE_Y0307",
+   "timemodified": 1790751600,
+   "assignments": [
+    {
+     "id": 30210,
+     "cmid": 830110,
+     "course": 18437,
+     "name": "Εργαστηριακή αναφορά 1 - Δίοδοι",
+     "nosubmissions": 0,
+     "submissiondrafts": 1,
+     "sendnotifications": 0,
+     "sendlatenotifications": 0,
+     "sendstudentnotifications": 1,
+     "duedate": 1793617200,
+     "allowsubmissionsfromdate": 1790802000,
+     "grade": 100,
+     "timemodified": 1790751600,
+     "completionsubmit": 1,
+     "cutoffdate": 0,
+     "gradingduedate": 0,
+     "teamsubmission": 0,
+     "requireallteammemberssubmit": 0,
+     "teamsubmissiongroupingid": 0,
+     "blindmarking": 0,
+     "hidegrader": 0,
+     "revealidentities": 0,
+     "attemptreopenmethod": "untilpass",
+     "maxattempts": -1,
+     "markingworkflow": 0,
+     "markingallocation": 0,
+     "requiresubmissionstatement": 0,
+     "preventsubmissionnotingroup": 0,
+     "configs": [],
+     "intro": "<p>Συνθετική εκφώνηση.</p>",
+     "introformat": 1,
+     "introfiles": [],
+     "introattachments": [],
+     "timelimit": 0,
+     "submissionattachments": 0
+    }
+   ]
+  },
+  {
+   "id": 18455,
+   "fullname": "Δομές Δεδομένων",
+   "shortname": "ECE_Y0309",
+   "timemodified": 1790751600,
+   "assignments": [
+    {
+     "id": 30155,
+     "cmid": 820140,
+     "course": 18455,
+     "name": "Άσκηση 1: Συνδεδεμένες λίστες",
+     "nosubmissions": 0,
+     "submissiondrafts": 1,
+     "sendnotifications": 0,
+     "sendlatenotifications": 0,
+     "sendstudentnotifications": 1,
+     "duedate": 1791925140,
+     "allowsubmissionsfromdate": 1790802000,
+     "grade": 100,
+     "timemodified": 1790751600,
+     "completionsubmit": 1,
+     "cutoffdate": 1792097940,
+     "gradingduedate": 0,
+     "teamsubmission": 0,
+     "requireallteammemberssubmit": 0,
+     "teamsubmissiongroupingid": 0,
+     "blindmarking": 0,
+     "hidegrader": 0,
+     "revealidentities": 0,
+     "attemptreopenmethod": "untilpass",
+     "maxattempts": -1,
+     "markingworkflow": 0,
+     "markingallocation": 0,
+     "requiresubmissionstatement": 0,
+     "preventsubmissionnotingroup": 0,
+     "configs": [],
+     "intro": "<p>Συνθετική εκφώνηση.</p>",
+     "introformat": 1,
+     "introfiles": [],
+     "introattachments": [],
+     "timelimit": 0,
+     "submissionattachments": 0
+    }
+   ]
+  }
+ ],
+ "warnings": [
+  {
+   "item": "module",
+   "itemid": 820177,
+   "warningcode": "1",
+   "message": "No access rights in module context"
+  },
+  {
+   "item": "module",
+   "itemid": 810188,
+   "warningcode": "1",
+   "message": "No access rights in module context"
+  }
+ ]
+}

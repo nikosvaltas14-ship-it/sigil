@@ -1,0 +1,3 @@
+# Adds the embedded browser for `login --browser` (ΑΠΘ single sign-on).
+-r base.in
+PySide6==6.11.2

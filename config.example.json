@@ -1,0 +1,136 @@
+{
+  "_comment": "Copy to config.json and edit. No secrets here: those go in the OS credential store (python -m sigil.study_guides set-secret NAME). The timetable below is a made-up example: replace it with your own.",
+  "vault_path": "",
+  "study_guides_semester_start": "2026-10-01",
+  "study_guides_semester_end": "2027-01-14",
+  "study_guides_no_class_dates": [
+    "2026-10-26",
+    "2026-10-28",
+    "2026-11-17",
+    "2026-12-24..2027-01-06"
+  ],
+  "study_exam_period_start": "2027-01-18",
+  "study_exam_period_end": "2027-02-12",
+  "study_guides_courses": [
+    {
+      "key": "circuits2",
+      "name_gr": "Ηλεκτρικά Κυκλώματα ΙΙ",
+      "name_en": "Electric Circuits II",
+      "vault_folder": "Electrical Circuits II",
+      "moodle_course_id": 0,
+      "addons": [
+        "circuits"
+      ],
+      "exam_format": "unknown"
+    },
+    {
+      "key": "electronics1",
+      "name_gr": "Ηλεκτρονική Ι",
+      "name_en": "Electronics I",
+      "vault_folder": "Electronics I",
+      "moodle_course_id": 0,
+      "addons": [
+        "circuits"
+      ],
+      "exam_format": "unknown"
+    },
+    {
+      "key": "appliedmath1",
+      "name_gr": "Εφαρμοσμένα Μαθηματικά Ι",
+      "name_en": "Applied Mathematics I",
+      "vault_folder": "Applied Mathematics I",
+      "moodle_course_id": 0,
+      "addons": [
+        "math"
+      ],
+      "exam_format": "unknown"
+    },
+    {
+      "key": "datastructures",
+      "name_gr": "Δομές Δεδομένων",
+      "name_en": "Data Structures",
+      "vault_folder": "Data Structures",
+      "moodle_course_id": 0,
+      "addons": [
+        "code"
+      ],
+      "exam_format": "unknown"
+    },
+    {
+      "key": "emfield1",
+      "name_gr": "Ηλεκτρομαγνητικό Πεδίο Ι",
+      "name_en": "Electromagnetic Field I",
+      "vault_folder": "Electromagnetic Field I",
+      "moodle_course_id": 0,
+      "addons": [
+        "math"
+      ],
+      "exam_format": "unknown"
+    }
+  ],
+  "study_guides_timetable": [
+    {
+      "weekday": "MO",
+      "start": "10:00",
+      "end": "12:00",
+      "course": "circuits2",
+      "type": "Θ"
+    },
+    {
+      "weekday": "MO",
+      "start": "14:00",
+      "end": "16:00",
+      "course": "appliedmath1",
+      "type": "Θ"
+    },
+    {
+      "weekday": "TU",
+      "start": "09:00",
+      "end": "11:00",
+      "course": "electronics1",
+      "type": "Θ"
+    },
+    {
+      "weekday": "TU",
+      "start": "12:00",
+      "end": "14:00",
+      "course": "circuits2",
+      "type": "Α"
+    },
+    {
+      "weekday": "WE",
+      "start": "10:00",
+      "end": "12:00",
+      "course": "datastructures",
+      "type": "Θ"
+    },
+    {
+      "weekday": "WE",
+      "start": "14:00",
+      "end": "17:00",
+      "course": "electronics1",
+      "type": "lab"
+    },
+    {
+      "weekday": "TH",
+      "start": "09:00",
+      "end": "11:00",
+      "course": "emfield1",
+      "type": "Θ"
+    },
+    {
+      "weekday": "TH",
+      "start": "12:00",
+      "end": "14:00",
+      "course": "appliedmath1",
+      "type": "Α"
+    },
+    {
+      "weekday": "FR",
+      "start": "10:00",
+      "end": "12:00",
+      "course": "datastructures",
+      "type": "lab"
+    }
+  ]
+}

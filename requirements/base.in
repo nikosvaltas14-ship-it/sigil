@@ -1,0 +1,10 @@
+# Direct dependencies. requirements.txt is generated from this with hashes:
+#   uv pip compile --universal --generate-hashes -p 3.12 requirements/base.in -o requirements.txt
+httpx==0.28.1
+python-dotenv==1.2.4
+keyring==25.7.0
+pymupdf==1.28.2
+python-pptx==1.0.2
+python-docx==1.2.0
+caldav==3.4.0
+icalendar==7.3.0

@@ -1,0 +1,17 @@
+You are checking a study guide written as a LaTeX document (below, between
+<document> tags) before it is compiled and given to a student. Your only job
+is correctness of the numbers and code.
+
+Check every numerical answer, every intermediate calculation, every unit and
+sign, and every stated code output in the document. Work through each one
+step by step by hand (no tools are available), including complex-number
+phasors and code outputs.
+
+Then answer in exactly one of two ways:
+- If everything is correct, reply with the single token NO_CORRECTIONS and
+  nothing else.
+- If anything is wrong, reply with the corrected FULL LaTeX document, from
+  \documentclass to \end{document}, with every error fixed and everything else
+  left exactly as it was: same language, same structure, same sections, same
+  figures, same wording. Do not shorten, summarise or restyle anything. Output
+  only the LaTeX source, nothing before or after it.

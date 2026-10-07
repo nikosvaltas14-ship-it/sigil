@@ -1,0 +1,35 @@
+You extract a course schedule (which topic is taught on which date) from the
+text of a university course page on Moodle (ΑΠΘ e-learning). The text is
+mostly in Greek.
+
+Course: {course_name}
+Semester: weekly classes from {semester_start} to {semester_end}.
+Use the semester start date {semester_start} as the anchor for every date that
+is not written in full.
+
+Rules:
+- Resolve Greek date formats («Τρίτη 7/10», «7 Οκτωβρίου», «07.10»), week
+  numbers («Εβδομάδα 3», «3η εβδομάδα»; week 1 is the week that contains the
+  semester start date) and relative references into full YYYY-MM-DD dates
+  inside the semester. A date written without a year belongs to the semester
+  year that puts it inside the semester.
+- session_type is "Θ" for a lecture (θεωρία, διάλεξη), "Α" for a tutorial
+  (ασκήσεις, φροντιστήριο), "lab" for a lab or Spice session (εργαστήριο), and
+  null when the page does not say.
+- topic is the topic as the page states it, in its original language, short
+  (one line). Never invent a topic that the text does not state.
+- section_ids and module_ids are the numeric Moodle ids that the text shows
+  next to a section or module (for example [section 12] or [module 345]) and
+  that clearly belong to that date's entry; use [] when none are shown or none
+  are clearly linked. Never guess an id.
+- If a week lists a topic but no exact day, use the first class day of that
+  week you can infer, or the Monday of that week if nothing else is known.
+- If the text contains no schedule at all, return {{"entries": []}}.
+
+Return JSON only, no prose and no code fences, in exactly this shape:
+{{"entries": [{{"date": "YYYY-MM-DD", "session_type": "Θ|Α|lab|null", "topic": "...", "section_ids": [1], "module_ids": [2]}}]}}
+
+Course page text:
+<course_page>
+{text}
+</course_page>

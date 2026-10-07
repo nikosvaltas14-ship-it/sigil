@@ -1,0 +1,65 @@
+# --- secrets and local settings (never commit) ---
+.env
+*.env
+.env.*
+!.env.example
+config.json
+config.json.*
+!config.example.json
+moodle_token.txt
+icloud_calendar.json
+*.pem
+*.key
+*.p12
+*.pfx
+cookies*.txt
+*.cookies
+
+# --- runtime data: tokens, caches, downloaded course files, built guides ---
+data/
+*.part
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+# downloaded / generated course material anywhere in the tree
+*.pdf
+*.pptx
+*.ppt
+*.docx
+*.doc
+*.zip
+*.tex
+*.aux
+*.xdv
+*.synctex.gz
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- node (not used, kept for safety) ---
+node_modules/
+
+# --- local AI-assistant / editor settings that can hold paths or keys ---
+.claude/
+CLAUDE.md
+.mcp.json
+*.local.*

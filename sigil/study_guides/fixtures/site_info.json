@@ -1,0 +1,43 @@
+{
+ "sitename": "e-Learning ΑΠΘ",
+ "username": "student01",
+ "firstname": "Φοιτητής",
+ "lastname": "Δοκιμαστικός",
+ "fullname": "Φοιτητής Δοκιμαστικός",
+ "lang": "el",
+ "userid": 48213,
+ "siteurl": "https://elearning.auth.gr",
+ "userpictureurl": "https://elearning.auth.gr/theme/image.php/boost/core/1/u/f1",
+ "functions": [
+  {
+   "name": "core_webservice_get_site_info",
+   "version": "2024100700"
+  },
+  {
+   "name": "core_enrol_get_users_courses",
+   "version": "2024100700"
+  },
+  {
+   "name": "core_course_get_contents",
+   "version": "2024100700"
+  }
+ ],
+ "downloadfiles": 1,
+ "uploadfiles": 1,
+ "release": "4.5.3 (Build: 20250310)",
+ "version": "2024100703",
+ "mobilecssurl": "",
+ "advancedfeatures": [],
+ "usercanmanageownfiles": true,
+ "userquota": 104857600,
+ "usermaxuploadfilesize": 52428800,
+ "userhomepage": 1,
+ "userprivateaccesskey": "synthetic-not-a-key",
+ "siteid": 1,
+ "sitecalendartype": "gregorian",
+ "usercalendartype": "gregorian",
+ "userissiteadmin": false,
+ "theme": "boost",
+ "limitconcurrentlogins": 0,
+ "policyagreed": 1
+}

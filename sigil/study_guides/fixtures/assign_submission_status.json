@@ -1,0 +1,46 @@
+{
+ "lastattempt": {
+  "submission": {
+   "id": 612004,
+   "userid": 48213,
+   "attemptnumber": 0,
+   "timecreated": 1791817320,
+   "timemodified": 1791916800,
+   "timestarted": null,
+   "status": "submitted",
+   "groupid": 0,
+   "assignment": 30155,
+   "latest": 1,
+   "plugins": [
+    {
+     "type": "file",
+     "name": "Υποβολές αρχείων",
+     "fileareas": [
+      {
+       "area": "submission_files",
+       "files": []
+      }
+     ]
+    }
+   ]
+  },
+  "submissiongroupmemberswhoneedtosubmit": [],
+  "submissionsenabled": true,
+  "locked": false,
+  "graded": false,
+  "canedit": false,
+  "caneditowner": true,
+  "cansubmit": false,
+  "extensionduedate": null,
+  "timelimit": 0,
+  "blindmarking": false,
+  "gradingstatus": "notgraded",
+  "usergroups": []
+ },
+ "assignmentdata": {
+  "attachments": {
+   "intro": []
+  }
+ },
+ "warnings": []
+}

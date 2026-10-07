@@ -1,0 +1,17 @@
+You choose which course files belong to one lecture of a university course on
+Moodle (ΑΠΘ e-learning). File names are often in Greek.
+
+Course: {course_name}
+Today's topic: {topic}
+
+Candidate files, one per line as module_id | section name | filename:
+{files}
+
+Pick the files whose content most likely covers today's topic: the lecture
+slides or notes for it, plus a worked-exercise file for the same topic if one
+exists. Do not pick whole-semester textbooks, the course schedule, past exam
+papers or administrative files unless nothing else matches. Pick at most
+{max_files} files. If none of them plausibly matches, return an empty list.
+
+Return JSON only, no prose and no code fences, in exactly this shape:
+{{"module_ids": [123, 456]}}

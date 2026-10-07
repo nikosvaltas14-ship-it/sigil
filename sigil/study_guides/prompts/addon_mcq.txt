@@ -1,0 +1,2 @@
+- Add a section of exam-style MCQs (options α–ε) with an answer key and
+  full distractor analysis.

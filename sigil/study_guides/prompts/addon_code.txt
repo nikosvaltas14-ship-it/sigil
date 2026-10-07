@@ -1,0 +1,7 @@
+CODE
+- Include «Τι τυπώνει;» multiple-choice questions on today's code, with full
+  distractor analysis (why each wrong option is wrong).
+- Include implementation exercises that build on today's structure.
+- Every code snippet and every stated output must compile and run correctly;
+  verify with a compiler if a tool is available.
+- Put code in a monospace environment that renders Greek comments correctly.

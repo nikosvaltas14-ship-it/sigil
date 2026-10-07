@@ -1,0 +1,11 @@
+CIRCUIT FIGURES
+- Draw circuits in the style of ΑΠΘ exam papers: current source = circle with
+  the arrow INSIDE it; voltage source = explicit +/− polarity marks.
+- Source direction and polarity are not cosmetic: they fix the sign/angle of
+  derived quantities. Double-check them in every figure.
+- In a Norton equivalent, draw Z_Th as a vertical parallel branch.
+- Include a «Ανάγνωση Σχήματος» section with its own worked examples and
+  tiered exercises: identify the reference node, nodes, branches and loops,
+  read each current-source arrow (which node it injects into), each
+  voltage-source polarity, spot series/parallel, and write the equations
+  directly from the figure.

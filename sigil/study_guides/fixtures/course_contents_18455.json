@@ -1,0 +1,431 @@
+[
+ {
+  "id": 96001,
+  "name": "",
+  "visible": 1,
+  "summary": "<p>Καλώς ήρθατε στο μάθημα <em>Δομές Δεδομένων</em>.</p>",
+  "summaryformat": 1,
+  "section": 0,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 802001,
+    "url": "https://elearning.auth.gr/mod/forum/view.php?id=802001",
+    "name": "Ανακοινώσεις",
+    "instance": 102001,
+    "contextid": 9100011,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/forum/1/monologo",
+    "modname": "forum",
+    "modplural": "forum",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": []
+   },
+   {
+    "id": 802002,
+    "url": "https://elearning.auth.gr/mod/label/view.php?id=802002",
+    "name": "Πρόγραμμα διαλέξεων 2026-27",
+    "instance": 102002,
+    "contextid": 9100012,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/label/1/monologo",
+    "modname": "label",
+    "modplural": "label",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": true,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "description": "<h4>Πρόγραμμα διαλέξεων 2026-27</h4><table class=\"generaltable\"><thead><tr><th>Ημερομηνία</th><th>Τύπος</th><th>Θέμα</th></tr></thead><tbody><tr><td>Δευτέρα 28/9</td><td>Θ</td><td>Εισαγωγή, ασυμπτωτική πολυπλοκότητα</td></tr><tr><td>Τετάρτη 30/9</td><td>Εργαστήριο</td><td>Επανάληψη C: δείκτες και δυναμική μνήμη</td></tr><tr><td>Δευτέρα 5/10</td><td>Θ</td><td>Πίνακες και συνδεδεμένες λίστες</td></tr><tr><td>Τετάρτη 7/10</td><td>Εργαστήριο</td><td>Υλοποίηση απλά συνδεδεμένης λίστας</td></tr><tr><td>Δευτέρα 12/10</td><td>Θ</td><td>Στοίβες και ουρές</td></tr><tr><td>Δευτέρα 19/10</td><td>Θ</td><td>Δέντρα &ndash; δυαδικά δέντρα αναζήτησης</td></tr><tr><td>Δευτέρα 26/10</td><td>Θ</td><td>Σωροί και ουρές προτεραιότητας</td></tr></tbody></table><p>&nbsp;</p><p>Αλλαγές θα ανακοινώνονται στο forum.</p>"
+   },
+   {
+    "id": 802003,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=802003",
+    "name": "Πρόγραμμα μαθήματος (PDF)",
+    "instance": 102003,
+    "contextid": 9100013,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "Programma_Mathimatos_DD_2026.pdf",
+      "filepath": "/",
+      "filesize": 98211,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100013/mod_resource/content/1/Programma_Mathimatos_DD_2026.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 98211,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 802004,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=802004",
+    "name": "Θέματα εξετάσεων Φεβρουάριος 2026",
+    "instance": 102004,
+    "contextid": 9100014,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "Themata_Exetaseon_Feb2026.pdf",
+      "filepath": "/",
+      "filesize": 512004,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100014/mod_resource/content/1/Themata_Exetaseon_Feb2026.pdf?forcedownload=1",
+      "timecreated": 1789603200,
+      "timemodified": 1789603200,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 512004,
+     "lastmodified": 1789603200,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 96002,
+  "name": "Ενότητα 1: Εισαγωγή",
+  "visible": 1,
+  "summary": "",
+  "summaryformat": 1,
+  "section": 1,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 802010,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=802010",
+    "name": "Διαφάνειες 1",
+    "instance": 102010,
+    "contextid": 9100015,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "DS_01_Intro_Complexity.pptx",
+      "filepath": "/",
+      "filesize": 3302111,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100015/mod_resource/content/1/DS_01_Intro_Complexity.pptx?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 3302111,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 96003,
+  "name": "Ενότητα 2: Λίστες",
+  "visible": 1,
+  "summary": "<p>Κώδικας παραδειγμάτων σε C.</p>",
+  "summaryformat": 1,
+  "section": 2,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 802020,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=802020",
+    "name": "Διαφάνειες 2",
+    "instance": 102020,
+    "contextid": 9100016,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "DS_02_Lists.pdf",
+      "filepath": "/",
+      "filesize": 1450990,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100016/mod_resource/content/1/DS_02_Lists.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 1450990,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 802021,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=802021",
+    "name": "Κώδικας λιστών",
+    "instance": 102021,
+    "contextid": 9100017,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "lists_examples.zip",
+      "filepath": "/",
+      "filesize": 18231,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100017/mod_resource/content/1/lists_examples.zip?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/zip",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 18231,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/zip"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 802022,
+    "url": "https://elearning.auth.gr/mod/page/view.php?id=802022",
+    "name": "Εργαστηριακή άσκηση 1",
+    "instance": 102022,
+    "contextid": 9100018,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/page/1/monologo",
+    "modname": "page",
+    "modplural": "page",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "description": "<p>Υλοποιήστε <code>push_front</code> και <code>reverse</code> για απλά συνδεδεμένη λίστα.</p>",
+    "contents": [
+     {
+      "type": "file",
+      "filename": "index.html",
+      "filepath": "/",
+      "filesize": 0,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9200001/mod_page/content/index.html?forcedownload=1",
+      "timecreated": null,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "text/html",
+      "userid": null,
+      "author": null,
+      "license": null
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 0,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "text/html"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 96004,
+  "name": "Ενότητα 3: Στοίβες και ουρές",
+  "visible": 1,
+  "summary": "",
+  "summaryformat": 1,
+  "section": 3,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 802030,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=802030",
+    "name": "Διαφάνειες 3",
+    "instance": 102030,
+    "contextid": 9100019,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "DS_03_Stacks_Queues.pdf",
+      "filepath": "/",
+      "filesize": 1204551,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100019/mod_resource/content/1/DS_03_Stacks_Queues.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 1204551,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ }
+]

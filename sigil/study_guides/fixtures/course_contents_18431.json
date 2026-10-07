@@ -1,0 +1,528 @@
+[
+ {
+  "id": 95001,
+  "name": "Γενικά",
+  "visible": 1,
+  "summary": "<p>Διδάσκοντες: Γ. Διδάσκων, Α. Βοηθός.</p><p>Διαλέξεις (Θ): Τρίτη 09:00-11:00, Αμφ. Ι. Φροντιστήριο (Α): Πέμπτη 13:00-15:00. Εργαστήριο Spice: Τετάρτη 15:00-17:00.</p>",
+  "summaryformat": 1,
+  "section": 0,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 801001,
+    "url": "https://elearning.auth.gr/mod/forum/view.php?id=801001",
+    "name": "Ανακοινώσεις",
+    "instance": 101001,
+    "contextid": 9100001,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/forum/1/monologo",
+    "modname": "forum",
+    "modplural": "forum",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": []
+   },
+   {
+    "id": 801002,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801002",
+    "name": "Οδηγός Μαθήματος 2026-27",
+    "instance": 101002,
+    "contextid": 9100002,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "Odigos_Mathimatos_KII_2026.pdf",
+      "filepath": "/",
+      "filesize": 214533,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100002/mod_resource/content/1/Odigos_Mathimatos_KII_2026.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 214533,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 801003,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801003",
+    "name": "Παλαιά θέματα εξετάσεων 2022-2025",
+    "instance": 101003,
+    "contextid": 9100003,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "Palaia_Themata_Exetaseon_KII_2022-2025.pdf",
+      "filepath": "/",
+      "filesize": 3120442,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100003/mod_resource/content/1/Palaia_Themata_Exetaseon_KII_2022-2025.pdf?forcedownload=1",
+      "timecreated": 1789516800,
+      "timemodified": 1789516800,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 3120442,
+     "lastmodified": 1789516800,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 801004,
+    "url": "https://elearning.auth.gr/mod/url/view.php?id=801004",
+    "name": "Σημειώσεις Alexander-Sadiku (εξωτερικός σύνδεσμος)",
+    "instance": 101004,
+    "contextid": 9100004,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/url/1/monologo",
+    "modname": "url",
+    "modplural": "url",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "url",
+      "filename": "Σημειώσεις",
+      "filepath": null,
+      "filesize": 0,
+      "fileurl": "https://example.org/sadiku-notes",
+      "timecreated": null,
+      "timemodified": 1789430400,
+      "sortorder": null,
+      "userid": null,
+      "author": null,
+      "license": null
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 0,
+     "lastmodified": 1789430400,
+     "mimetypes": [],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 95002,
+  "name": "Εβδομάδα 1",
+  "visible": 1,
+  "summary": "<p><strong>Τρίτη 29/9:</strong> Εισαγωγή – Επανάληψη νόμων Kirchhoff (Θ)</p><p><strong>Πέμπτη 1/10:</strong> Ασκήσεις στους νόμους Kirchhoff (Α)</p>",
+  "summaryformat": 1,
+  "section": 1,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 801010,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801010",
+    "name": "Διάλεξη 1 - Εισαγωγή",
+    "instance": 101010,
+    "contextid": 9100005,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "KII_Dialexi_01_Eisagogi.pdf",
+      "filepath": "/",
+      "filesize": 1840221,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100005/mod_resource/content/1/KII_Dialexi_01_Eisagogi.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 1840221,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 95003,
+  "name": "Εβδομάδα 2",
+  "visible": 1,
+  "summary": "<ul><li>Τρίτη 6/10: Ανάλυση κόμβων</li><li>Πέμπτη 8/10: Ανάλυση βρόχων &amp; υπερβρόχων (Α)</li></ul>",
+  "summaryformat": 1,
+  "section": 2,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 801020,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801020",
+    "name": "Διάλεξη 2 - Ανάλυση κόμβων",
+    "instance": 101020,
+    "contextid": 9100006,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "KII_Dialexi_02_Analysi_Kombon.pdf",
+      "filepath": "/",
+      "filesize": 2311004,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100006/mod_resource/content/1/KII_Dialexi_02_Analysi_Kombon.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 2311004,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 801021,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801021",
+    "name": "Ασκήσεις 2 - Βρόχοι",
+    "instance": 101021,
+    "contextid": 9100007,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "KII_Askiseis_02_Vroxoi.pdf",
+      "filepath": "/",
+      "filesize": 655120,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100007/mod_resource/content/1/KII_Askiseis_02_Vroxoi.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 655120,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 95004,
+  "name": "Εβδομάδα 3",
+  "visible": 1,
+  "summary": "<p>Τρίτη 13/10: Θεωρήματα Thevenin και Norton</p><p>Τετάρτη 14/10: Εργαστήριο 1 – Εισαγωγή στο LTspice</p><p>Πέμπτη 15/10: Φροντιστήριο — Ασκήσεις σε Thevenin/Norton</p>",
+  "summaryformat": 1,
+  "section": 3,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 801030,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801030",
+    "name": "Διάλεξη 3 - Thevenin/Norton",
+    "instance": 101030,
+    "contextid": 9100008,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "KII_Dialexi_03_Thevenin_Norton.pdf",
+      "filepath": "/",
+      "filesize": 1977310,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100008/mod_resource/content/1/KII_Dialexi_03_Thevenin_Norton.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 1977310,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   },
+   {
+    "id": 801031,
+    "url": "https://elearning.auth.gr/mod/folder/view.php?id=801031",
+    "name": "Εργαστήριο Spice",
+    "instance": 101031,
+    "contextid": 9100009,
+    "visible": 1,
+    "uservisible": true,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/folder/1/monologo",
+    "modname": "folder",
+    "modplural": "folder",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "Lab1_LTspice_Odigies.pdf",
+      "filepath": "/",
+      "filesize": 402113,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100100/mod_folder/content/1/Lab1_LTspice_Odigies.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     },
+     {
+      "type": "file",
+      "filename": "lab1_rc.asc",
+      "filepath": "/netlists/",
+      "filesize": 2890,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100100/mod_folder/content/1/netlists/lab1_rc.asc?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/octet-stream",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 2,
+     "filessize": 405003,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/octet-stream",
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ },
+ {
+  "id": 95005,
+  "name": "Εβδομάδα 4",
+  "visible": 1,
+  "summary": "<p>Τρίτη 20/10: Μεταβατική απόκριση κυκλωμάτων RC και RL</p>",
+  "summaryformat": 1,
+  "section": 4,
+  "hiddenbynumsections": 0,
+  "uservisible": true,
+  "modules": [
+   {
+    "id": 801040,
+    "url": "https://elearning.auth.gr/mod/resource/view.php?id=801040",
+    "name": "Διάλεξη 4 - Μεταβατικά",
+    "instance": 101040,
+    "contextid": 9100010,
+    "visible": 0,
+    "uservisible": false,
+    "visibleoncoursepage": 1,
+    "modicon": "https://elearning.auth.gr/theme/image.php/boost/resource/1/monologo",
+    "modname": "resource",
+    "modplural": "resource",
+    "availability": null,
+    "indent": 0,
+    "onclick": "",
+    "afterlink": null,
+    "customdata": "\"\"",
+    "noviewlink": false,
+    "completion": 0,
+    "downloadcontent": 1,
+    "dates": [],
+    "contents": [
+     {
+      "type": "file",
+      "filename": "KII_Dialexi_04_Metavatika.pdf",
+      "filepath": "/",
+      "filesize": 2201337,
+      "fileurl": "https://elearning.auth.gr/webservice/pluginfile.php/9100010/mod_resource/content/1/KII_Dialexi_04_Metavatika.pdf?forcedownload=1",
+      "timecreated": 1789430400,
+      "timemodified": 1789430400,
+      "sortorder": 1,
+      "mimetype": "application/pdf",
+      "isexternalfile": false,
+      "userid": 3021,
+      "author": "Γ. Διδάσκων",
+      "license": "allrightsreserved"
+     }
+    ],
+    "contentsinfo": {
+     "filescount": 1,
+     "filessize": 2201337,
+     "lastmodified": 1789430400,
+     "mimetypes": [
+      "application/pdf"
+     ],
+     "repositorytype": ""
+    }
+   }
+  ]
+ }
+]

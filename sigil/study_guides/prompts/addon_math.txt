@@ -1,0 +1,5 @@
+MATHEMATICS
+- Maximum algebraic detail; justify each step with a short note
+  (e.g. «ολοκληρώνοντας ως προς x», «αντικαθιστώντας»).
+- For field problems, state the coordinate system and why it was chosen
+  before starting.
