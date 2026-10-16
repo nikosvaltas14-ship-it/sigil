@@ -272,7 +272,12 @@ def test_daily_cap_stops_guide_attempts(monkeypatch, tmp_path):
     from sigil.study_guides.models import OK
 
     monkeypatch.setattr(jobs, "BUDGET_PATH", tmp_path / "budget.json")
-    monkeypatch.setattr(jobs, "load_settings", lambda cfg: SimpleNamespace(enabled=True))
+    monkeypatch.setattr(jobs, "PASS_PATH", tmp_path / "pass.json")
+    monkeypatch.setattr(jobs, "load_settings", lambda cfg: SimpleNamespace(
+        enabled=True, run_time="20:00", weekly_budget=0.5, guide_cost=0.04))
+    window_end = int(datetime(2026, 10, 24).timestamp())     # day 4 of the week: 28% allowed
+    monkeypatch.setattr(jobs.usage, "read_usage", lambda s, d: jobs.usage.Usage(
+        0.0, window_end, 0.0))
     monkeypatch.setattr(jobs.semester, "notice_due", lambda s, d: False)
     monkeypatch.setattr(jobs.icloud_calendar, "refresh_if_stale", lambda now: False)
     items = [SimpleNamespace(day=date(2026, 10, 20), course_key=f"c{i}", last_reason="")

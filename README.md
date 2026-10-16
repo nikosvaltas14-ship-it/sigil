@@ -11,18 +11,29 @@ deadlines. It is the study part of Sigil, my personal assistant.
   Moodle web-service token.
 - **Course discovery.** Finds the semester's enrolled courses and maps them to
   the courses in your config.
-- **A study guide after every class.** Every hour it checks which classes have
-  ended and still have no guide. For each one it:
+- **A study guide for each day's classes, once a day.** From 20:30 (config
+  `study_guides_run_time`) it builds the guides for the classes that have ended
+  and still have no guide, one pass per day. For each one it:
   - reads the course page's schedule (or the official course outline) to find
     the day's topic;
   - picks that lecture's files and extracts their text (PDF, PowerPoint, Word,
     scanned PDFs);
   - has Claude write a Greek LaTeX guide (theory from zero, worked examples,
-    exercises with full solutions, common mistakes);
-  - runs a second pass that checks the maths, and a final review that approves
-    or corrects the guide;
+    exercises with full solutions, common mistakes) with Sonnet at medium
+    effort;
+  - runs a second pass that checks the maths, and a final review by Opus at low
+    effort that approves or corrects the guide;
   - compiles it with XeLaTeX and files the PDF in an Obsidian vault folder per
     course.
+- **A hard weekly budget.** The guides may take at most 50% of the weekly
+  Claude limit (`study_guides_weekly_budget_pct`), paced at an equal share per
+  day of the limit's 7-day window: on day N the weekly usage, counting
+  everything on the account, may be at most 50% x N/7. Unused days carry over.
+  Before each guide the weekly usage is read from the Claude Code CLI and the
+  guide only starts if its expected cost (measured from earlier guides, 4% until
+  then) still fits under that day's allowance. If the usage cannot be read, or
+  the 5-hour limit is used up, nothing is built and the next hourly run
+  tries again. Telegram is told once a day when the guides are paused.
 - **Timetable aware.** Uses a weekly timetable, holidays and semester dates.
   Lab dates can come from an iCloud calendar.
 - **Handwritten notes (optional).** Adds new pages from GoodNotes PDF backups
@@ -96,7 +107,7 @@ Three commands are meant to run on a schedule:
 
 | Command | When | What |
 |---|---|---|
-| `catchup` | hourly | guides for finished classes that have none yet (at most `study_guides_max_guides_per_day`, default 6) |
+| `catchup` | hourly | one pass a day (from `study_guides_run_time`): guides for finished classes that have none yet, within the weekly budget (at most `study_guides_max_guides_per_day`, default 6) |
 | `remind` | every 30 min | due Telegram reminders |
 | `weekly` | Saturdays | the weekly review PDF |
 
