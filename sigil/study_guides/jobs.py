@@ -1,6 +1,7 @@
 """The scheduled jobs, for running headless (Task Scheduler / cron).
 
-    catchup  hourly: build a guide for every finished class that has none yet
+    catchup  hourly tick, one pass a day: guides for the finished classes that
+             have none yet, within the weekly Claude budget (usage.py)
     remind   every 30 min: Telegram reminders for tests, finals and deadlines
     weekly   Saturdays: the weekly review PDF
 
@@ -17,7 +18,7 @@ from pathlib import Path
 
 from .. import notify
 from ..fileio import atomic_write_text, read_text_locked
-from . import catchup, icloud_calendar, semester, weekly
+from . import catchup, icloud_calendar, semester, usage, weekly
 from .models import OK, WORK_DIR
 from .run import run
 from .settings import load_settings
@@ -25,11 +26,32 @@ from .state import LockBusy
 
 log = logging.getLogger(__name__)
 
-# A guide costs several Opus calls; material crafted to fail every build or
+# A guide costs several model calls; material crafted to fail every build or
 # review must not be able to burn the whole Claude plan. Config
-# `study_guides_max_guides_per_day` caps the guide attempts that reach the model.
+# `study_guides_max_guides_per_day` caps the guide attempts that reach the model,
+# and usage.py keeps the guides inside their share of the weekly Claude limit.
 DEFAULT_MAX_GUIDES_PER_DAY = 6
 BUDGET_PATH = WORK_DIR / "daily_budget.json"
+# The guides are built once a day: this file holds the date of the last
+# finished pass ("done") and of the last blocked-pass warning ("warned").
+PASS_PATH = WORK_DIR / "daily_pass.json"
+
+
+def _pass_marked(today: date, key: str, path: Path | None = None) -> bool:
+    try:
+        return json.loads(read_text_locked(path or PASS_PATH)).get(key) == today.isoformat()
+    except (OSError, ValueError, AttributeError):
+        return False
+
+
+def _mark_pass(today: date, key: str, path: Path | None = None) -> None:
+    try:
+        data = json.loads(read_text_locked(path or PASS_PATH))
+    except (OSError, ValueError):
+        data = {}
+    data = data if isinstance(data, dict) else {}
+    data[key] = today.isoformat()
+    atomic_write_text(path or PASS_PATH, json.dumps(data))
 
 
 def _spent_today(today: date, path: Path | None = None) -> int:
@@ -65,6 +87,10 @@ def run_catchup(cfg, now: datetime | None = None) -> str:
             text = semester.notice_text(settings)
         notify.send_telegram(cfg, text)
         return f"skipped: the semester ended on {settings.semester_end:%Y-%m-%d}"
+    if now.strftime("%H:%M") < settings.run_time:
+        return f"skipped: the daily pass runs from {settings.run_time}"
+    if _pass_marked(day, "done"):
+        return "skipped: today's pass already ran"
     lookback = int(cfg.get("study_guides_catchup_days", catchup.DEFAULT_LOOKBACK_DAYS) or 0)
     icloud_calendar.refresh_if_stale(now)
     items = catchup.due(settings, now, lookback)
@@ -73,21 +99,40 @@ def run_catchup(cfg, now: datetime | None = None) -> str:
     told: list[str] = []
     cap = int(cfg.get("study_guides_max_guides_per_day", DEFAULT_MAX_GUIDES_PER_DAY) or 0)
     spent = _spent_today(day)
+    reading = usage.read_usage(settings, WORK_DIR)
+    blocked = None
     for item in items:
         if cap and spent >= cap:
             log.warning("study guides: daily cap of %d guide attempts reached", cap)
             told.append(f"Study guides: daily cap of {cap} reached; the rest wait for tomorrow.")
             break
+        blocked = usage.decide(reading, share=settings.weekly_budget,
+                               estimate=usage.estimate_cost(settings.guide_cost),
+                               now_ts=now.timestamp())
+        if not blocked.allowed:
+            log.warning("study guides: not building, %s", blocked.reason)
+            # A transient block (5-hour limit, unreadable usage) is retried next
+            # hour; Telegram hears of it once a day, not hourly.
+            if not blocked.retry_later or not _pass_marked(day, "warned"):
+                told.append(f"Study guides paused: {blocked.reason}.")
+                _mark_pass(day, "warned")
+            break
+        before = reading
         try:
             results = run(cfg, day=item.day, course=item.course_key, out=lambda _line: None)
         except LockBusy as exc:
             told.append(f"Study guides {item.day:%Y-%m-%d}: not run ({exc})")
+            blocked = usage.Decision(False, str(exc), retry_later=True)
             break
         except Exception as exc:  # noqa: BLE001 — one course must not stop the rest
             log.exception("study guides run crashed")
             told.append(f"Study guides {item.day:%Y-%m-%d} {item.course_key}: "
                         f"crashed ({type(exc).__name__})")
             continue
+        finally:
+            reading = usage.latest() or reading
+        if any(r.status == OK for r in results):
+            usage.record_cost(before, reading)
         spent += sum(1 for r in results if _reached_model(r))
         _record_spent(day, spent)
         log.info("study guides: %s", summary_text(results, item.day.isoformat()).replace("\n", " "))
@@ -96,6 +141,8 @@ def run_catchup(cfg, now: datetime | None = None) -> str:
                                      and r.reason != item.last_reason)]
         if new:
             told.append(summary_text(new, item.day.isoformat()))
+    if blocked is None or not blocked.retry_later:
+        _mark_pass(day, "done")
     if told:
         notify.send_telegram(cfg, "\n".join(told))
     return f"checked {len(items)} due class day(s)"

@@ -115,17 +115,27 @@ DEFAULTS = {
     "agent_claude_cmd": "",
     "study_guides_enabled": True,
     "study_guides_catchup_days": 3,
+    # The guides are built once a day, from this time on (HH:MM, local).
+    "study_guides_run_time": "20:30",
     "study_guides_semester_start": "",
     "study_guides_semester_end": "",
     # "YYYY-MM-DD" days and "YYYY-MM-DD..YYYY-MM-DD" ranges without classes.
     "study_guides_no_class_dates": [],
     "study_guides_skip_labs": False,
     "study_guides_infer_topic": True,
-    "study_guides_model": "opus",
+    # Sonnet at medium effort writes the guide; Opus at low effort reviews it.
+    "study_guides_model": "sonnet",
+    "study_guides_effort": "medium",
     "study_guides_helper_model": "sonnet",
     "study_guides_verify_pass": True,
     "study_guides_review_pass": True,
     "study_guides_review_model": "opus",
+    "study_guides_review_effort": "low",
+    # Hard cap: the guides never bring the weekly Claude limit above this %,
+    # paced evenly over the week (see study_guides/usage.py).
+    "study_guides_weekly_budget_pct": 50,
+    # Assumed % of the weekly limit per guide until real guides were measured.
+    "study_guides_guide_cost_pct": 4,
     "study_guides_timeout_sec": 1800,
     # Most guide attempts per day that may reach Claude (cost and abuse cap).
     "study_guides_max_guides_per_day": 6,

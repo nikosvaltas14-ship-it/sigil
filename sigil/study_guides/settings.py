@@ -38,8 +38,13 @@ log = logging.getLogger(__name__)
 # ---- defaults ---------------------------------------------------------------
 
 DEFAULT_RUN_TIME = "20:30"
-DEFAULT_MODEL = "opus"              # the CLI takes aliases, not dated ids
+DEFAULT_MODEL = "sonnet"            # the CLI takes aliases, not dated ids
+DEFAULT_EFFORT = "medium"           # --effort of the guide-writing call
 DEFAULT_REVIEW_MODEL = "opus"        # the gate before a guide is published
+DEFAULT_REVIEW_EFFORT = "low"
+EFFORT_LEVELS = ("low", "medium", "high", "xhigh", "max")
+DEFAULT_WEEKLY_BUDGET_PCT = 50      # % of the weekly Claude limit the guides may use
+DEFAULT_GUIDE_COST_PCT = 4          # assumed % of the weekly limit per guide, until measured
 DEFAULT_HELPER_MODEL = "sonnet"     # schedule extraction, file choice, verify
 DEFAULT_TIMEOUT_SEC = 1800          # watchdog for one guide generation
 MIN_TIMEOUT_SEC = 60                # below this even a short guide cannot finish
@@ -123,6 +128,12 @@ class Settings:
     calendar_labs: bool = True
     calendar_aliases: tuple[tuple[str, str], ...] = ()
     strands: dict = field(default_factory=dict)   # syllabus.parse_strands
+    effort: str = DEFAULT_EFFORT
+    review_effort: str = DEFAULT_REVIEW_EFFORT
+    # Share (0..1) of the weekly limit the guides may use in a week, and the
+    # share one guide is assumed to cost until real ones were measured.
+    weekly_budget: float = DEFAULT_WEEKLY_BUDGET_PCT / 100
+    guide_cost: float = DEFAULT_GUIDE_COST_PCT / 100
 
 
 # ---- public API ---------------------------------------------------------------
@@ -170,6 +181,13 @@ def load_settings(cfg, *, course_ids_path: Path = COURSE_IDS_PATH) -> Settings:
         calendar_labs=bool(cfg.get("study_guides_calendar_labs", True)),
         calendar_aliases=_alias_pairs(cfg.get("study_guides_calendar_aliases")),
         strands=parse_strands(cfg.get("study_guides_strands")),
+        effort=_effort(cfg.get("study_guides_effort"), DEFAULT_EFFORT, "effort"),
+        review_effort=_effort(cfg.get("study_guides_review_effort"),
+                              DEFAULT_REVIEW_EFFORT, "review_effort"),
+        weekly_budget=_bounded_int(cfg.get("study_guides_weekly_budget_pct"),
+                                   DEFAULT_WEEKLY_BUDGET_PCT, 1, 100, "weekly_budget_pct") / 100,
+        guide_cost=_bounded_int(cfg.get("study_guides_guide_cost_pct"),
+                                DEFAULT_GUIDE_COST_PCT, 1, 100, "guide_cost_pct") / 100,
     )
 
 
@@ -432,6 +450,15 @@ def _alias_pairs(raw) -> tuple[tuple[str, str], ...]:
 def _text(value, default: str) -> str:
     text = str(value).strip() if value is not None else ""
     return text or default
+
+
+def _effort(value, default: str, label: str) -> str:
+    level = _text(value, default).lower()
+    if level not in EFFORT_LEVELS:
+        log.warning("study guides: %s %r is not one of %s; using %s",
+                    label, value, "/".join(EFFORT_LEVELS), default)
+        return default
+    return level
 
 
 def _vault_root(cfg) -> Path:

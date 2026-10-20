@@ -57,6 +57,7 @@ from typing import Any
 
 from ..config import DATA_DIR, child_env
 from ..proc import find_cli, kill_tree as _kill_tree
+from . import usage
 from .prompt import load_prompt
 
 log = logging.getLogger(__name__)
@@ -112,7 +113,7 @@ def run_claude(prompt: str, *, model: str, cwd: Path, system_prompt: str | None 
                tools: str = "", allowed_tools: tuple = (),
                json_schema: dict | None = None, timeout: int = 1800,
                claude_cmd: str = "", max_output_tokens: int | None = None,
-               collect_text: bool = False) -> CLIResult:
+               collect_text: bool = False, effort: str = "") -> CLIResult:
     """One non-interactive Claude Code call. Raises ClaudeCLIError on failure.
 
     `tools` is the --tools list ("" = none, "Read", "Bash,Read"); `allowed_tools`
@@ -124,6 +125,10 @@ def run_claude(prompt: str, *, model: str, cwd: Path, system_prompt: str | None 
     the output-token cap; the CLI then asks the model to resume in a NEW
     message, and `result` holds only that continuation (the smoke run of
     2026-09-25 got 36k chars ending in the document's end but not its start).
+
+    `effort` is the CLI's --effort level ("" = the CLI's own default). A
+    `collect_text` run is stream-json, which also carries the weekly-limit
+    reading; it is noted for `usage.latest()` even when the call then fails.
     """
     cli = find_cli("claude", claude_cmd or "")
     if not cli:
@@ -133,7 +138,7 @@ def run_claude(prompt: str, *, model: str, cwd: Path, system_prompt: str | None 
     system_file =_write_temp_system(system_prompt) if system_prompt else None
     try:
         cmd = _command(cli, model, tools, allowed_tools, json_schema, system_file,
-                       collect_text)
+                       collect_text, effort)
         started = time.monotonic()
         log.info("claude cli: model=%s tools=%r prompt=%d chars system=%d chars",
                  model, tools, len(prompt), len(system_prompt or ""))
@@ -142,6 +147,8 @@ def run_claude(prompt: str, *, model: str, cwd: Path, system_prompt: str | None 
     finally:
         if system_file:
             Path(system_file).unlink(missing_ok=True)
+    if collect_text:
+        usage.note(usage.parse_usage(stdout))
     result = _parse_result(stdout, stderr, code)
     if collect_text:
         result = replace(result, text=_joined_assistant_text(stdout) or result.text)
@@ -178,13 +185,15 @@ def _clear_agent_files(cwd: Path) -> None:
 
 def _command(cli: str, model: str, tools: str, allowed_tools: tuple,
              json_schema: dict | None, system_file: str | None,
-             collect_text: bool = False) -> list[str]:
+             collect_text: bool = False, effort: str = "") -> list[str]:
     # stream-json needs --verbose in -p mode; it ends with the same result object.
     output = (["--output-format", "stream-json", "--verbose"] if collect_text
               else ["--output-format", "json"])
     cmd = [cli, "-p", "--model", model, *output,
            "--tools", tools, "--strict-mcp-config", "--setting-sources", "project",
            "--no-session-persistence", "--permission-mode", "dontAsk", "--safe-mode"]
+    if effort:
+        cmd += ["--effort", effort]
     if allowed_tools:
         cmd += ["--allowedTools", ",".join(allowed_tools)]
     if json_schema is not None:
@@ -382,7 +391,8 @@ def generate_guide(system: str, user: str, *, attachments_dir: Path, settings) -
                         system_prompt=system, tools="Read",
                         allowed_tools=GUIDE_ALLOWED_TOOLS,
                         timeout=settings.timeout_sec, claude_cmd=settings.claude_cmd,
-                        max_output_tokens=GUIDE_MAX_OUTPUT_TOKENS, collect_text=True)
+                        max_output_tokens=GUIDE_MAX_OUTPUT_TOKENS, collect_text=True,
+                        effort=settings.effort)
     return replace(result, text=strip_to_document(result.text))
 
 
@@ -447,7 +457,8 @@ def review_guide(latex: str, *, pdf_path: Path, workdir: Path, settings) -> tupl
     result = run_claude(prompt, model=settings.review_model, cwd=workdir,
                         tools="Read", allowed_tools=GUIDE_ALLOWED_TOOLS,
                         timeout=settings.timeout_sec, claude_cmd=settings.claude_cmd,
-                        max_output_tokens=GUIDE_MAX_OUTPUT_TOKENS, collect_text=True)
+                        max_output_tokens=GUIDE_MAX_OUTPUT_TOKENS, collect_text=True,
+                        effort=settings.review_effort)
     return _parse_review(latex, result.text)
 
 
